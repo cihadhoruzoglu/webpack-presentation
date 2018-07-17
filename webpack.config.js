@@ -15,7 +15,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
-            }, 
+            },
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: [
@@ -29,5 +29,6 @@ module.exports = {
             title: 'Webpack Presentation'
         })
     ],
-    mode: "development"
+    mode: "development",
+    devtool: 'inline-source-map'
 };
