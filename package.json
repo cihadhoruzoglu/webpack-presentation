@@ -7,8 +7,9 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open --watch"
   },
+  "sideEffects": false,
   "dependencies": {
     "lodash": "^4.17.10"
   },
