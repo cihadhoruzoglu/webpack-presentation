@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
     entry: {
@@ -27,8 +28,13 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Webpack Presentation'
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ],
+    devServer: {
+        contentBase: './dist',
+        hot: true
+    },
     mode: "development",
     devtool: 'inline-source-map'
 };
